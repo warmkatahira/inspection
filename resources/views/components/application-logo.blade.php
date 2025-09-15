@@ -1,0 +1,1 @@
+<img src="{{ asset('image/warm_logo.svg') }}" class="inline-block w-52">
