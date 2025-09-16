@@ -15,5 +15,7 @@ Route::middleware('common')->group(function (){
     // +-+-+-+-+-+-+-+- 検品 +-+-+-+-+-+-+-+-
     Route::controller(InspectionController::class)->prefix('inspection')->name('inspection.')->group(function(){
         Route::get('', 'index')->name('index');
+        Route::get('ajax_check_item_id_code', 'ajax_check_item_id_code');
+        Route::post('complete', 'complete')->name('complete');
     });
 });
