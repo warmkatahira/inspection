@@ -46,40 +46,11 @@
     <body class="min-h-screen flex items-center justify-center">
         <!-- アラート表示 -->
         <x-alert/>
-        <div id="animated-background" class="bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 min-h-screen w-full flex flex-col items-center justify-center">
+        <div class="bg-gray-300 min-h-screen w-full flex flex-col items-center justify-center">
             <div class="bg-white bg-opacity-80 rounded-3xl shadow-xl p-12 text-center max-w-md w-full">
-                <img src="{{ asset('image/warm_logo.svg') }}" class="welcome_logo mb-5">
-                <p class="text-gray-600 mb-1 text-3xl">顧客管理システム</p>
-                <p class="text-gray-600 mb-8 text-xl merienda">
-                    <span class="text-theme-main text-3xl">C</span>lient 
-                    <span class="text-theme-main text-3xl">M</span>anagement 
-                    <span class="text-theme-main text-3xl">S</span>ystem
-                </p>
+                <p class="text-gray-600 mb-1 text-3xl">検品システム</p>
                 <div class="flex flex-col gap-5">
-                    <a href="{{ route('login') }}" class="btn bg-theme-pink text-white py-3 rounded-lg">ログイン</a>
-                    <a href="{{ route('register') }}" class="btn bg-theme-purple text-white py-3 rounded-lg">ユーザー登録</a>
-                </div>
-            </div>
-            @php
-                $imagePath = storage_path('app/public/client_images');
-                $images = [];
-                if(File::exists($imagePath)){
-                    $images = File::files($imagePath);
-                    // no_image.png を除外
-                    $images = array_filter($images, function($image) {
-                        return $image->getFilename() !== 'no_image.png';
-                    });
-                }
-            @endphp
-            <div class="logo-slider-wrapper overflow-hidden w-full py-10">
-                <div class="logo-slider flex flex-row">
-                    @foreach($images as $image)
-                        <img src="{{ asset('storage/client_images/' . $image->getFilename()) }}" class="logo-item w-28 h-20 object-contain mx-5">
-                    @endforeach
-                    {{-- 複製して無限ループ --}}
-                    @foreach($images as $image)
-                        <img src="{{ asset('storage/client_images/' . $image->getFilename()) }}" class="logo-item w-28 h-20 object-contain mx-5">
-                    @endforeach
+                    <a href="{{ route('login') }}" class="btn bg-black text-white py-10 rounded-lg mt-10 text-xl">ログイン</a>
                 </div>
             </div>
         </div>

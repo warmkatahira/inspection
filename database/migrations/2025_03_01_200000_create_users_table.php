@@ -20,14 +20,10 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('is_active')->default(0);
-            $table->string('role_id', 15)->default('user');
             $table->string('profile_image_file_name', 50)->default('no_image.png');
             $table->timestamp('last_login_at')->nullable();
-            $table->boolean('must_change_password')->default(1);
             $table->rememberToken();
             $table->timestamps();
-            // 外部キー
-            $table->foreign('role_id')->references('role_id')->on('roles')->cascadeOnUpdate();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table){

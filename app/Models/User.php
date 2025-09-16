@@ -29,10 +29,8 @@ class User extends Authenticatable
         'email',
         'password',
         'is_active',
-        'role_id',
         'profile_image_file_name',
         'last_login_at',
-        'must_change_password',
     ];
     // 全てのレコードを取得
     public static function getAll()
@@ -43,11 +41,6 @@ class User extends Authenticatable
     public static function getSpecify($user_no)
     {
         return self::where('user_no', $user_no);
-    }
-    // rolesテーブルとのリレーション
-    public function role()
-    {
-        return $this->belongsTo(Role::Class, 'role_id', 'role_id');
     }
     // フルネームを返すアクセサ
     public function getFullNameAttribute(): string

@@ -3,32 +3,8 @@
     display: none;
 }
 
-// 顧客リスト用
-.client_list {
-    width: 100%;
-    height: calc(100vh - 120px);
-}
-
-// 顧客売上リスト用
-.client_sales_list {
-    width: 100%;
-    height: calc(100vh - 120px);
-}
-
-// 取扱品目リスト用
-.item_category_list {
-    width: 100%;
-    height: calc(100vh - 170px);
-}
-
-// ユーザーリスト用
-.user_list {
-    width: 100%;
-    height: calc(100vh - 120px);
-}
-
-// 操作ログ用
-.operation_log_list {
+// 商品リスト
+.item_list {
     width: 100%;
     height: calc(100vh - 120px);
 }

@@ -1,0 +1,1 @@
+tippy(".tippy_dashboard",{content:"ダッシュボード",duration:500,allowHTML:!0,placement:"right"});tippy(".tippy_item",{content:"商品",duration:500,allowHTML:!0,placement:"right"});tippy(".tippy_inspection",{content:"検品",duration:500,allowHTML:!0,placement:"right"});

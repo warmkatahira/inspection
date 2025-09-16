@@ -1,10 +1,6 @@
 {
-  "_chartjs-plugin-datalabels.esm-CglBOSix.js": {
-    "file": "assets/chartjs-plugin-datalabels.esm-CglBOSix.js",
-    "name": "chartjs-plugin-datalabels.esm"
-  },
   "resources/css/app.css": {
-    "file": "assets/app-Bs2y_6n5.css",
+    "file": "assets/app-Cyk7vrXR.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -24,7 +20,7 @@
     ]
   },
   "resources/js/chart_color.js": {
-    "file": "assets/chart_color-DSS5FTIa.js",
+    "file": "assets/chart_color-l0sNRNKZ.js",
     "name": "chart_color",
     "src": "resources/js/chart_color.js",
     "isEntry": true
@@ -34,44 +30,6 @@
     "name": "checkbox",
     "src": "resources/js/checkbox.js",
     "isEntry": true
-  },
-  "resources/js/client_management/client_detail/client_detail.js": {
-    "file": "assets/client_detail-l0sNRNKZ.js",
-    "name": "client_detail",
-    "src": "resources/js/client_management/client_detail/client_detail.js",
-    "isEntry": true
-  },
-  "resources/js/client_management/client_detail/client_sales_chart.js": {
-    "file": "assets/client_sales_chart-BW33-iRr.js",
-    "name": "client_sales_chart",
-    "src": "resources/js/client_management/client_detail/client_sales_chart.js",
-    "isEntry": true,
-    "imports": [
-      "_chartjs-plugin-datalabels.esm-CglBOSix.js",
-      "resources/js/chart_color.js"
-    ]
-  },
-  "resources/js/client_management/client_list/client_list.js": {
-    "file": "assets/client_list-ayO8-hmO.js",
-    "name": "client_list",
-    "src": "resources/js/client_management/client_list/client_list.js",
-    "isEntry": true
-  },
-  "resources/js/client_management/client_sales_list/client_sales_list.js": {
-    "file": "assets/client_sales_list-w10jqpsL.js",
-    "name": "client_sales_list",
-    "src": "resources/js/client_management/client_sales_list/client_sales_list.js",
-    "isEntry": true
-  },
-  "resources/js/dashboard/chart.js": {
-    "file": "assets/chart-vZVTiuUt.js",
-    "name": "chart",
-    "src": "resources/js/dashboard/chart.js",
-    "isEntry": true,
-    "imports": [
-      "_chartjs-plugin-datalabels.esm-CglBOSix.js",
-      "resources/js/chart_color.js"
-    ]
   },
   "resources/js/dropdown.js": {
     "file": "assets/dropdown-GO9xXqWO.js",
@@ -91,6 +49,12 @@
     "src": "resources/js/image_fade_in.js",
     "isEntry": true
   },
+  "resources/js/inspection/inspection/inspection.js": {
+    "file": "assets/inspection-l0sNRNKZ.js",
+    "name": "inspection",
+    "src": "resources/js/inspection/inspection/inspection.js",
+    "isEntry": true
+  },
   "resources/js/loading.js": {
     "file": "assets/loading-ChqFcCVw.js",
     "name": "loading",
@@ -98,7 +62,7 @@
     "isEntry": true
   },
   "resources/js/navigation.js": {
-    "file": "assets/navigation-BbIU3Rd4.js",
+    "file": "assets/navigation-DRXs1eAA.js",
     "name": "navigation",
     "src": "resources/js/navigation.js",
     "isEntry": true
@@ -127,21 +91,6 @@
     "src": "resources/js/search_date.js",
     "isEntry": true
   },
-  "resources/js/setting/master_management/item_category/item_category.js": {
-    "file": "assets/item_category-CJIM40Hg.js",
-    "name": "item_category",
-    "src": "resources/js/setting/master_management/item_category/item_category.js",
-    "isEntry": true
-  },
-  "resources/js/system_admin/user/user.js": {
-    "file": "assets/user-DC2RL5qp.js",
-    "name": "user",
-    "src": "resources/js/system_admin/user/user.js",
-    "isEntry": true,
-    "imports": [
-      "resources/js/loading.js"
-    ]
-  },
   "resources/js/tippy.js": {
     "file": "assets/tippy-DZqS_6Lp.js",
     "name": "tippy",
@@ -149,23 +98,23 @@
     "isEntry": true
   },
   "resources/js/welcome.js": {
-    "file": "assets/welcome-B1otfZrt.js",
+    "file": "assets/welcome-l0sNRNKZ.js",
     "name": "welcome",
     "src": "resources/js/welcome.js",
     "isEntry": true
   },
   "resources/sass/common.scss": {
-    "file": "assets/common--o3Fpcm3.css",
+    "file": "assets/common-DHOW8Mb_.css",
     "src": "resources/sass/common.scss",
     "isEntry": true
   },
   "resources/sass/dropdown.scss": {
-    "file": "assets/dropdown-D4g0ibpL.css",
+    "file": "assets/dropdown-DbdE8FXA.css",
     "src": "resources/sass/dropdown.scss",
     "isEntry": true
   },
   "resources/sass/height_adjustment.scss": {
-    "file": "assets/height_adjustment-DUn8yfho.css",
+    "file": "assets/height_adjustment-gtlrgnBC.css",
     "src": "resources/sass/height_adjustment.scss",
     "isEntry": true
   },
@@ -175,7 +124,7 @@
     "isEntry": true
   },
   "resources/sass/navigation.scss": {
-    "file": "assets/navigation-BUs7DK4o.css",
+    "file": "assets/navigation-DSzQ4ehN.css",
     "src": "resources/sass/navigation.scss",
     "isEntry": true
   },
@@ -195,7 +144,8 @@
     "isEntry": true
   },
   "resources/sass/welcome.scss": {
-    "file": "assets/welcome-BTCmCTP6.css",
+    "file": "assets/welcome-DP2rzg_V.js",
+    "name": "welcome",
     "src": "resources/sass/welcome.scss",
     "isEntry": true
   }

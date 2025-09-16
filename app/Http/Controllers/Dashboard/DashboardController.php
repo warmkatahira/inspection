@@ -5,10 +5,9 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 // モデル
-use App\Models\Region;
-use App\Models\Base;
-// サービス
-use App\Services\Dashboard\ChartService;
+use App\Models\Item;
+// その他
+use Carbon\CarbonImmutable;
 
 class DashboardController extends Controller
 {
@@ -16,24 +15,19 @@ class DashboardController extends Controller
     {
         // ページヘッダーをセッションに格納
         session(['page_header' => 'ダッシュボード']);
+        // 商品数を取得
+        $item_count = Item::getAll()->count();
+        // 検品実施済みの商品数を取得
+        $inspection_complete_count = Item::where('is_completed', 1)->count();
+        // 本日検品が完了した商品数を取得
+        $today_inspection_complete_count = Item::where('is_completed', 1)->whereDate('inspected_at', CarbonImmutable::today())->count();
+        // 進捗率を取得
+        $progress_rate = ($inspection_complete_count / $item_count) * 100;
         return view('dashboard')->with([
-        ]);
-    }
-
-    public function ajax_get_chart_data()
-    {
-        // インスタンス化
-        $ChartService = new ChartService;
-        // 地域単位の顧客数を集計
-        $regions = Region::withCount('clients')->get();
-        // 倉庫単位の顧客数を集計
-        $bases = Base::withCount('clients')->orderBy('sort_order', 'asc')->get();
-        // 売上ランク単位の顧客数を集計
-        $sales_rank_counts = $ChartService->getClientCountBySalesRank();
-        return response()->json([
-            'regions' => $regions,
-            'bases' => $bases,
-            'sales_rank_counts' => $sales_rank_counts,
+            'item_count' => $item_count,
+            'inspection_complete_count' => $inspection_complete_count,
+            'today_inspection_complete_count' => $today_inspection_complete_count,
+            'progress_rate' => $progress_rate,
         ]);
     }
 }

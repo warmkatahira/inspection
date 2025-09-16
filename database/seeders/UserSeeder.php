@@ -21,19 +21,30 @@ class UserSeeder extends Seeder
             'email' => 't.katahira@warm.co.jp',
             'password' => bcrypt('katahira134'),
             'is_active' => 1,
-            'role_id' => 'system_admin',
-            'profile_image_file_name' => 'katahira.png',
-            'must_change_password' => 0,
         ]);
         User::create([
-            'user_id' => 'user',
-            'last_name' => 'テストユーザー',
+            'user_id' => 'user1',
+            'last_name' => 'ユーザー1',
             'first_name' => '',
-            'email' => 'test@warm.co.jp',
+            'email' => 'user1@warm.co.jp',
             'password' => bcrypt('user1111'),
             'is_active' => 1,
-            'role_id' => 'admin',
-            'must_change_password' => 0,
+        ]);
+        User::create([
+            'user_id' => 'user2',
+            'last_name' => 'ユーザー2',
+            'first_name' => '',
+            'email' => 'user2@warm.co.jp',
+            'password' => bcrypt('user2222'),
+            'is_active' => 1,
+        ]);
+        User::create([
+            'user_id' => 'user3',
+            'last_name' => 'ユーザー3',
+            'first_name' => '',
+            'email' => 'user3@warm.co.jp',
+            'password' => bcrypt('user3333'),
+            'is_active' => 1,
         ]);
     }
 }

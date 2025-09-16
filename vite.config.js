@@ -28,17 +28,8 @@ export default defineConfig({
                 'resources/sass/common.scss',
                 // 認証
                 'resources/js/auth/register.js',
-                // ダッシュボード
-                'resources/js/dashboard/chart.js',
-                // 顧客管理
-                'resources/js/client_management/client_list/client_list.js',
-                'resources/js/client_management/client_sales_list/client_sales_list.js',
-                'resources/js/client_management/client_detail/client_detail.js',
-                'resources/js/client_management/client_detail/client_sales_chart.js',
-                // 設定
-                'resources/js/setting/master_management/item_category/item_category.js',
-                // システム管理
-                'resources/js/system_admin/user/user.js',
+                // 検品
+                'resources/js/inspection/inspection/inspection.js',
                 // プロフィール
                 'resources/js/profile/profile.js',
                 'resources/sass/profile/profile.scss',

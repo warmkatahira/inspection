@@ -47,22 +47,14 @@
         <script src="https://unpkg.com/tippy.js@6"></script>
     </head>
     <body class="min-h-screen flex items-center justify-center">
-        <div id="animated-background" class="bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 min-h-screen w-full flex flex-col items-center justify-center py-5">
+        <div class="bg-gray-300 min-h-screen w-full flex flex-col items-center justify-center py-5">
             <div class="bg-white bg-opacity-80 rounded-3xl shadow-xl p-10 max-w-md w-full">
                 <!-- アラート表示 -->
                 <x-alert/>
                 <!-- ローディング -->
                 <x-loading />
                 <div class="text-center">
-                    <a href="{{ route('welcome.index') }}">
-                        <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                    </a>
-                    <p class="text-gray-600 mb-1 text-3xl mt-5">顧客管理システム</p>
-                    <p class="text-gray-600 mb-3 text-xl merienda">
-                        <span class="text-theme-main text-3xl">C</span>lient 
-                        <span class="text-theme-main text-3xl">M</span>anagement 
-                        <span class="text-theme-main text-3xl">S</span>ystem
-                    </p>
+                    <p class="text-gray-600 mb-5 text-3xl">検品システム</p>
                 </div>
                 <div class="w-full px-6">
                     {{ $slot }}

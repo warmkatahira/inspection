@@ -16,8 +16,7 @@
             <x-auth.input id="password" label="パスワード" type="password" :db="null" />
         @endif
         <div class="flex mt-4">
-            <a href="{{ route('password.request') }}" class="underline mt-3">パスワードを忘れた方</a>
-            <button type="submit" class="btn bg-theme-pink text-white text-center rounded-lg py-2 px-5 ml-auto">ログイン</button>
+            <button type="submit" class="btn bg-black text-white text-center rounded-lg py-5 w-full text-lg">ログイン</button>
         </div>
     </form>
 </x-guest-layout>
