@@ -54,7 +54,12 @@ $('#item_id_code').on("change",function(){
 // 検品OK時の処理
 function inspection_ok(data){
     // 音声を再生
-    audio_play('proc');
+    // 検品数量が1の場合
+    if(data['inspection_quantity'] == 1){
+        audio_play('start');
+    }else{
+        audio_play('proc');
+    }
     // メッセージをクリア
     $('#message').html(null);
     // Nullにして、フォーカスをセット
@@ -72,3 +77,15 @@ function inspection_ng(message){
     $('#item_id_code').val(null);
     $('#item_id_code').focus();
 }
+
+// 検品完了ボタンを押下した場合
+$('#complete_enter').on("click",function(){
+    // 処理を実行するか確認
+    const result = window.confirm("検品を完了しますか？");
+    // 「はい」が押下されたらsubmit、「いいえ」が押下されたら処理キャンセル
+    if(result === true){
+        audio_play('end');
+        start_loading();
+        $("#complete_form").submit();
+    }
+});

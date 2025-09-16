@@ -1,4 +1,5 @@
 <x-app-layout>
+    <button type="button" id="complete_enter" class="btn text-lg bg-btn-enter text-white py-3 px-10 mt-3">検品完了</button>
     <div class="mt-5 flex flex-row gap-5 items-start text-base">
         <div class="flex flex-col w-3/12">
             <div class="flex flex-col mb-2 w-full">
@@ -19,7 +20,7 @@
             <div id="message" class="px-10 pt-5 h-24 bg-white border border-black text-lg"></div>
         </div>
     </div>
-    <form method="POST" action="{{ route('inspection.complete') }}" class="m-0" id="inspection_form">
+    <form method="POST" action="{{ route('inspection.complete') }}" class="m-0" id="complete_form">
         @csrf
     </form>
 </x-app-layout>

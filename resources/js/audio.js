@@ -4,12 +4,16 @@ export default function audio_play(category, eventHandler = null){
         const audio_dir = `audio/`;
         let audio_path = '';
         // カテゴリに応じた音声ファイルパスを生成
-        if(category === 'proc'){
+        if(category === 'start'){
+            audio_path = `${audio_dir}start.mp3`;
+        }else if(category === 'proc'){
             audio_path = `${audio_dir}proc.mp3`;
         }else if (category === 'ng'){
             audio_path = `${audio_dir}ng.mp3`;
         }else if(category === 'complete'){
             audio_path = `${audio_dir}complete.mp3`;
+        }else if(category === 'end'){
+            audio_path = `${audio_dir}end.mp3`;
         }else{
             console.warn(`無効なカテゴリ: ${category}`);
             return;

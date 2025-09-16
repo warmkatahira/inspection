@@ -3,6 +3,7 @@
     <div class="flex flex-col gap-y-2 p-3 bg-white min-w-60 text-xs border border-black">
         <x-search.input type="text" label="商品JANコード" id="search_item_jan_code" />
         <x-search.input type="text" label="商品名" id="search_item_name" />
+        <x-search.select-boolean label="検品ステータス" id="search_is_completed" label1="検品済" label0="未実施" />
         <input type="hidden" id="search_type" name="search_type" value="default">
         <div class="flex flex-row">
             <!-- 検索ボタン -->

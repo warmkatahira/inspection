@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 // サービス
 use App\Services\Inspection\Inspection\ItemIdCodeCheckService;
+use App\Services\Inspection\Inspection\CompleteService;
+// その他
+use Illuminate\Support\Facades\DB;
 
 class InspectionController extends Controller
 {
@@ -36,6 +39,27 @@ class InspectionController extends Controller
             'error_message' => session('error_message'),
             'stock' => session('stock'),
             'inspection_quantity' => session('inspection_quantity'),
+        ]);
+    }
+
+    public function complete(Request $request)
+    {
+        try{
+            DB::transaction(function () use ($request){
+                // インスタンス化
+                $CompleteService = new CompleteService;
+                // 検品情報を更新
+                $CompleteService->updateItem();
+            });
+        }catch (\Exception $e){
+            return redirect()->back()->withInput()->with([
+                'alert_type' => 'error',
+                'alert_message' => $e->getMessage(),
+            ]);
+        }
+        return redirect()->route('inspection.index')->with([
+            'alert_type' => 'success',
+            'alert_message' => '検品が完了しました。',
         ]);
     }
 }

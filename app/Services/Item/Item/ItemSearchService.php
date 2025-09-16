@@ -17,6 +17,7 @@ class ItemSearchService
         session()->forget([
             'search_item_jan_code',
             'search_item_name',
+            'search_is_completed',
         ]);
         return;
     }
@@ -33,6 +34,7 @@ class ItemSearchService
         if($request->search_type === 'search'){
             session(['search_item_jan_code' => $request->search_item_jan_code]);
             session(['search_item_name' => $request->search_item_name]);
+            session(['search_is_completed' => $request->search_is_completed]);
         }
         return;
     }
@@ -51,6 +53,11 @@ class ItemSearchService
         if(session('search_item_name') != null){
             // 条件を指定して取得
             $query = $query->where('item_name', 'LIKE', '%'.session('search_item_name').'%');
+        }
+        // 検品ステータスの条件がある場合
+        if(session('search_is_completed') != null){
+            // 条件を指定して取得
+            $query = $query->where('is_completed', session('search_is_completed'));
         }
         // 並び替えを実施
         return $query->orderBy('item_jan_code', 'asc');

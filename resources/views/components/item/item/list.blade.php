@@ -13,7 +13,7 @@
             </thead>
             <tbody class="bg-white">
                 @foreach($items as $item)
-                    <tr class="text-left cursor-default whitespace-nowrap">
+                    <tr class="text-left cursor-default whitespace-nowrap @if($item->is_completed) bg-teal-100 @endif">
                         <td class="py-1 px-2 border">{{ $item->item_jan_code }}</td>
                         <td class="py-1 px-2 border">{{ $item->item_name }}</td>
                         <td class="py-1 px-2 border text-right">{{ number_format($item->stock) }}</td>

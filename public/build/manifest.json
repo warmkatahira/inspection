@@ -50,10 +50,13 @@
     "isEntry": true
   },
   "resources/js/inspection/inspection/inspection.js": {
-    "file": "assets/inspection-BnKkmZrE.js",
+    "file": "assets/inspection-0PtpaW7e.js",
     "name": "inspection",
     "src": "resources/js/inspection/inspection/inspection.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "resources/js/loading.js"
+    ]
   },
   "resources/js/loading.js": {
     "file": "assets/loading-ChqFcCVw.js",
