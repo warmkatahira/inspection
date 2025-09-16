@@ -23,5 +23,6 @@
     <form method="POST" action="{{ route('inspection.complete') }}" class="m-0" id="complete_form">
         @csrf
     </form>
+    <input type="hidden" id="end" value="{{ session('end') }}">
 </x-app-layout>
 @vite(['resources/js/inspection/inspection/inspection.js'])

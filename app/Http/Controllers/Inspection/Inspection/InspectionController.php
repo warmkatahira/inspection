@@ -60,6 +60,7 @@ class InspectionController extends Controller
         return redirect()->route('inspection.index')->with([
             'alert_type' => 'success',
             'alert_message' => '検品が完了しました。',
+            'end' => true,
         ]);
     }
 }

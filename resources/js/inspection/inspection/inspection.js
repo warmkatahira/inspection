@@ -5,6 +5,10 @@ import start_loading from '../../loading';
 $(document).ready(function() {
     // 商品識別コードにフォーカス
     $('#item_id_code').focus();
+    // 検品完了後であれば
+    if($('#end').val()){
+        audio_play('end');
+    }
 });
 
 // 商品識別コードが変更されたら
@@ -84,7 +88,6 @@ $('#complete_enter').on("click",function(){
     const result = window.confirm("検品を完了しますか？");
     // 「はい」が押下されたらsubmit、「いいえ」が押下されたら処理キャンセル
     if(result === true){
-        audio_play('end');
         start_loading();
         $("#complete_form").submit();
     }

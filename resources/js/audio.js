@@ -23,7 +23,7 @@ export default function audio_play(category, eventHandler = null){
         audio.currentTime = 0;
         audio.play();
         // 完了時のイベントハンドラを登録
-        if(eventHandler && category === 'complete' ||  category === 'end'){
+        if(eventHandler && category === 'complete'){
             audio.addEventListener('ended', eventHandler);
         }
     }
