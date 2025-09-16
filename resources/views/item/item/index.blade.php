@@ -8,4 +8,3 @@
         <x-item.item.list :items="$items" />
     </div>
 </x-app-layout>
-@vite(['resources/js/item/item/item.js'])
