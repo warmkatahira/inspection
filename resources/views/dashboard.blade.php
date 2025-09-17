@@ -7,5 +7,6 @@
             <p class="bg-theme-main text-white py-3 w-60 pl-3">検品進捗率</p>
             <p class="bg-white py-3 w-32 text-right pr-2">{{ number_format($progress_rate, 1) }}<i class="las la-percent ml-1 la-sm"></i></p>
         </div>
+        <x-dashboard.info-div label="合計検品数量" :value="$total_inspection_quantity" />
     </div>
 </x-app-layout>
