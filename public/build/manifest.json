@@ -58,6 +58,15 @@
       "resources/js/loading.js"
     ]
   },
+  "resources/js/item/item/item.js": {
+    "file": "assets/item-BndlxhO9.js",
+    "name": "item",
+    "src": "resources/js/item/item/item.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/loading.js"
+    ]
+  },
   "resources/js/loading.js": {
     "file": "assets/loading-ChqFcCVw.js",
     "name": "loading",

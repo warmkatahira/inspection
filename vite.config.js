@@ -28,6 +28,8 @@ export default defineConfig({
                 'resources/sass/common.scss',
                 // 認証
                 'resources/js/auth/register.js',
+                // 商品
+                'resources/js/item/item/item.js',
                 // 検品
                 'resources/js/inspection/inspection/inspection.js',
                 // プロフィール

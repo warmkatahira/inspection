@@ -1,0 +1,1 @@
+import{s as t}from"./loading-ChqFcCVw.js";$(".inspection_quantity_reset_enter").on("click",function(){window.confirm("検品数量のリセットを実行しますか？")===!0&&(t(),$("#item_no").val($(this).data("item-no")),$("#inspection_quantity_reset_form").submit())});

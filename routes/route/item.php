@@ -7,6 +7,7 @@ use App\Http\Controllers\Item\ItemMenu\ItemMenuController;
 // +-+-+-+-+-+-+-+- 商品 +-+-+-+-+-+-+-+-
 use App\Http\Controllers\Item\Item\ItemController;
 use App\Http\Controllers\Item\Item\ItemDownloadController;
+use App\Http\Controllers\Item\Item\InspectionQuantityResetController;
 
 Route::middleware('common')->group(function (){
     // +-+-+-+-+-+-+-+- 商品メニュー +-+-+-+-+-+-+-+-
@@ -19,5 +20,8 @@ Route::middleware('common')->group(function (){
     });
     Route::controller(ItemDownloadController::class)->prefix('item_download')->name('item_download.')->group(function(){
         Route::get('download', 'download')->name('download');
+    });
+    Route::controller(InspectionQuantityResetController::class)->prefix('inspection_quantity_reset')->name('inspection_quantity_reset.')->group(function(){
+        Route::post('reset', 'reset')->name('reset');
     });
 });
