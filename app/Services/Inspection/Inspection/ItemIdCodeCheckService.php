@@ -27,6 +27,7 @@ class ItemIdCodeCheckService
             session(['item_jan_code' => $item->item_jan_code]);
             session(['stock' => $item->stock]);
             session(['inspection_quantity' => 0]);
+            session(['item_name' => $item->item_name]);
         }
     }
 

@@ -28,7 +28,6 @@ $('#item_id_code').on("change",function(){
             dataType: 'json',
             success: function(data){
                 try {
-                    console.log(data);
                     // エラーがある場合
                     if(data['error_message']) {
                         // エラーを返す
@@ -40,6 +39,8 @@ $('#item_id_code').on("change",function(){
                     if(data['inspection_quantity'] == 1){
                         // 理論在庫数を更新
                         $('#stock').html(data['stock']);
+                        // 商品名を表示
+                        $('#item_name').html(data['item_name']);
                     }
                     // 検品OK時の処理
                     inspection_ok(data);

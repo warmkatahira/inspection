@@ -39,6 +39,7 @@ class InspectionController extends Controller
             'error_message' => session('error_message'),
             'stock' => session('stock'),
             'inspection_quantity' => session('inspection_quantity'),
+            'item_name' => session('item_name'),
         ]);
     }
 
