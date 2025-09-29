@@ -43,7 +43,7 @@ class ItemSearchService
     public function getSearchResult()
     {
         // クエリをセット
-        $query = Item::query();
+        $query = Item::query()->with('base');
         // 商品JANコードの条件がある場合
         if(session('search_item_jan_code') != null){
             // 条件を指定して取得

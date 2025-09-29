@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+// その他
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 
 class Item extends Model
 {
@@ -16,16 +19,23 @@ class Item extends Model
         'inspection_quantity',
         'is_completed',
         'inspected_at',
+        'base_id',
     ];
     // 全てのレコードを取得
     public static function getAll()
     {
         return self::orderBy('item_jan_code', 'asc');
     }
+    // basesテーブルとのリレーション
+    public function base()
+    {
+        return $this->belongsTo(Base::class, 'base_id', 'base_id');
+    }
     // ダウンロード時のヘッダーを定義
     public static function downloadHeader()
     {
         return [
+            '倉庫名',
             '商品JANコード',
             '商品名',
             '理論在庫数',
@@ -40,5 +50,14 @@ class Item extends Model
     public function getIsCompletedTextAttribute(): string
     {
         return $this->is_completed ? '実施済' : '未実施';
+    }
+    // ログインしている倉庫の商品だけにしている
+    protected static function booted()
+    {
+        static::addGlobalScope('user_base', function (Builder $builder) {
+            if (Auth::check()) {
+                $builder->where('base_id', Auth::user()->base_id);
+            }
+        });
     }
 }

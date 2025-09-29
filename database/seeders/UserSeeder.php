@@ -21,6 +21,7 @@ class UserSeeder extends Seeder
             'email' => 't.katahira@warm.co.jp',
             'password' => bcrypt('katahira134'),
             'is_active' => 1,
+            'base_id' => 'hiroshima',
         ]);
         User::create([
             'user_id' => 'user1',
@@ -29,6 +30,7 @@ class UserSeeder extends Seeder
             'email' => 'user1@warm.co.jp',
             'password' => bcrypt('user1111'),
             'is_active' => 1,
+            'base_id' => 'hiroshima',
         ]);
         User::create([
             'user_id' => 'user2',
@@ -37,14 +39,7 @@ class UserSeeder extends Seeder
             'email' => 'user2@warm.co.jp',
             'password' => bcrypt('user2222'),
             'is_active' => 1,
-        ]);
-        User::create([
-            'user_id' => 'user3',
-            'last_name' => 'ユーザー3',
-            'first_name' => '',
-            'email' => 'user3@warm.co.jp',
-            'password' => bcrypt('user3333'),
-            'is_active' => 1,
+            'base_id' => '3rd',
         ]);
     }
 }

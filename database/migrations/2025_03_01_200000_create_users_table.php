@@ -22,8 +22,11 @@ return new class extends Migration
             $table->boolean('is_active')->default(0);
             $table->string('profile_image_file_name', 50)->default('no_image.png');
             $table->timestamp('last_login_at')->nullable();
+            $table->string('base_id', 10);
             $table->rememberToken();
             $table->timestamps();
+            // 外部キー
+            $table->foreign('base_id')->references('base_id')->on('bases')->cascadeOnUpdate()->cascadeOnDelete();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table){

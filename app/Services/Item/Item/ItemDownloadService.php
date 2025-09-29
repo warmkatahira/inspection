@@ -31,6 +31,7 @@ class ItemDownloadService
                 foreach($items as $item){
                     // 変数に情報を格納
                     $row = [
+                        $item->base->base_name,
                         $item->item_jan_code,
                         $item->item_name,
                         $item->stock,

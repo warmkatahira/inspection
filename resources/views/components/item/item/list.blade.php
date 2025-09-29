@@ -4,6 +4,7 @@
             <thead>
                 <tr class="text-left text-white bg-black whitespace-nowrap sticky top-0">
                     <th class="font-thin py-1 px-2 text-center">操作</th>
+                    <th class="font-thin py-1 px-2 text-center">倉庫名</th>
                     <th class="font-thin py-1 px-2 text-center">商品JANコード</th>
                     <th class="font-thin py-1 px-2 text-center">商品名</th>
                     <th class="font-thin py-1 px-2 text-center">理論在庫数</th>
@@ -20,6 +21,7 @@
                                 <button type="button" class="btn inspection_quantity_reset_enter bg-btn-cancel text-white py-1 px-2" data-item-no="{{ $item->item_no }}">検品数量リセット</button>
                             </div>
                         </td>
+                        <td class="py-1 px-2 border">{{ $item->base->base_name }}</td>
                         <td class="py-1 px-2 border">{{ $item->item_jan_code }}</td>
                         <td class="py-1 px-2 border">{{ $item->item_name }}</td>
                         <td class="py-1 px-2 border text-right">{{ number_format($item->stock) }}</td>

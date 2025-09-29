@@ -8,13 +8,14 @@ use Illuminate\Http\Request;
 use App\Models\Item;
 // その他
 use Carbon\CarbonImmutable;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
     public function index()
     {
         // ページヘッダーをセッションに格納
-        session(['page_header' => 'ダッシュボード']);
+        session(['page_header' => 'ダッシュボード('.Auth::user()->base->base_name.')']);
         // 商品数を取得
         $item_count = Item::getAll()->count();
         // 検品実施済みの商品数を取得

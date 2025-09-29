@@ -17,7 +17,9 @@ class ItemSeeder extends Seeder
      */
     public function run(): void
     {
-        $sql = File::get(database_path('seeders/sql/items.sql'));
+        $sql = File::get(database_path('seeders/sql/items_at_hiroshima.sql'));
+        DB::unprepared($sql);
+        $sql = File::get(database_path('seeders/sql/items_at_3rd.sql'));
         DB::unprepared($sql);
     }
 }

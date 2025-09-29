@@ -31,6 +31,7 @@ class User extends Authenticatable
         'is_active',
         'profile_image_file_name',
         'last_login_at',
+        'base_id',
     ];
     // 全てのレコードを取得
     public static function getAll()
@@ -41,6 +42,11 @@ class User extends Authenticatable
     public static function getSpecify($user_no)
     {
         return self::where('user_no', $user_no);
+    }
+    // basesテーブルとのリレーション
+    public function base()
+    {
+        return $this->belongsTo(Base::class, 'base_id', 'base_id');
     }
     // フルネームを返すアクセサ
     public function getFullNameAttribute(): string
